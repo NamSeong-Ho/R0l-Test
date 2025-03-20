@@ -1,0 +1,73 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .Login .title {
+    font-size: 45px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .inputlogin{
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .inputlogin input {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 22px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .loginButton:hover {
+    font-weight: bold;
+  }
+  
+ .whatsign {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+ }
+
+ .whatsign .what {
+  color: #a0a0a0;
+ }
+
+ .whatsign .signnow {
+  color: #525252;
+  cursor: pointer;
+ }
+
+ .whatsign, .signnow:hover {
+  color: #000000;
+}
