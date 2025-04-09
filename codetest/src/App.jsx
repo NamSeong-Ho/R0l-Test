@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Sign from "./pages/Sign";
 import Login from "./pages/Login";
-import SongList from "./pages/SongList";
 import './App.css';
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
           <Route path="/:id" element={<Main />} />
           <Route path="/Sign" element={<Sign />} />
           <Route path="/Login" element={<Login setLoggedInUser={setLoggedInUser} />} />
-          <Route path="/SongList/:id" element={<SongList />} />
         </Routes>
       </div>
     </Router>

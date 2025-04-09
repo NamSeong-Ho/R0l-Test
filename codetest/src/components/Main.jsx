@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './Main.css';
+import styles from './Main.module.css';
 
 function Main() {
   const navigate = useNavigate();
@@ -17,11 +17,8 @@ function Main() {
   };
 
   return (
-    <main className="Main">
-      <h1>나만의 음악 플레이리스트를<br />만들어 보세요!</h1>
-      <button onClick={handleButtonClick} className="start">
-        지금 시작해보기!
-      </button>
+    <main className={styles.main}>
+      
     </main>
   );
 }

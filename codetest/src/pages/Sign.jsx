@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Sign.css';
+import styles from './Signpage.module.css';
 
 const Sign = () => {
   const [formData, setFormData] = useState({
@@ -46,27 +46,16 @@ const Sign = () => {
       alert(response.data.message || '회원가입 완료!');
       navigate('/Login');
     } catch (error) {
-      console.error('오.류.발.생생', error);
-      alert(error.response?.data?.message || '응 아니야야');
+      console.error('오.류.발.생', error);
+      alert(error.response?.data?.message || '응 아니야');
     }
   };
   
   return (
-    <div className="SignContainer">
-      <h1>나만의 리스트로!</h1>
-      <h2>회원가입</h2>
+    <div className={styles.Sign}>
+      <div className={styles.title}>회원가입</div>
       <form onSubmit={handleSubmit}>
-      <div className="inputGroup">
-          <input
-            type="text"
-            name="name"
-            placeholder="이름"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="inputGroup">
+        <div className={styles.inputsign}>
           <input
             type="text"
             name="id"
@@ -76,7 +65,7 @@ const Sign = () => {
             required
           />
         </div>
-        <div className="inputGroup">
+        <div className={styles.inputsign}>
           <input
             type="password"
             name="password"
@@ -86,7 +75,7 @@ const Sign = () => {
             required
           />
         </div>
-        <div className="inputGroup">
+        <div className={styles.inputsign}>
           <input
             type="password"
             name="password_check"
@@ -96,7 +85,17 @@ const Sign = () => {
             required
           />
         </div>
-        <div className="inputGroup">
+        <div className={styles.inputsign}>
+          <input
+            type="text"
+            name="name"
+            placeholder="닉네임"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.inputsign}>
           <input
             type="tel"
             name="email"
@@ -106,8 +105,8 @@ const Sign = () => {
             required
           />
         </div>
-        <button type="submit" className="signUpButton">
-          가입하기
+        <button type="submit" className={styles.signUpButton}>
+          회원가입
         </button>
       </form>
     </div>

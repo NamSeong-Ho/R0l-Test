@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import styles from './Loginpage.module.css';
+import git from '../components/image/github1.svg';
+import google from '../components/image/Google.svg';
 
 const Login = ({ setLoggedInUser }) => {
   const [formData, setFormData] = useState({
@@ -36,11 +38,10 @@ const Login = ({ setLoggedInUser }) => {
   };
 
   return (
-    <div className="LoginContainer">
-      <h1>나만의 리스트로!</h1>
-      <h2>로그인</h2>
+    <div className={styles.Login}>
+      <div className={styles.title}>로그인</div>
       <form onSubmit={handleSubmit}>
-        <div className="inputGroup">
+        <div className={styles.inputlogin}>
           <input
             type="text"
             name="username"
@@ -50,7 +51,7 @@ const Login = ({ setLoggedInUser }) => {
             required
           />
         </div>
-        <div className="inputGroup">
+        <div className={styles.inputlogin}>
           <input
             type="password"
             name="password"
@@ -60,9 +61,26 @@ const Login = ({ setLoggedInUser }) => {
             required
           />
         </div>
-        <button type="submit" className="loginButton">
+        <button type="submit" className={styles.loginButton}>
           로그인
         </button>
+        <div className={styles.whatsign}>
+          <div className={styles.what}>
+          아직 회원이 아니신가요?
+          </div>
+          <div className={styles.signnow}
+          onClick={() => navigate('/Sign')}>
+           회원가입
+        </div>
+        </div>
+        <div className={styles.github}>
+          <img src={git} alt='1'/>
+          <div>GitHub로 로그인하기</div>
+        </div>
+        <div className={styles.google}>
+          <img src={google} alt='1'/>
+          <div>Google로 로그인하기</div>
+        </div>
       </form>
     </div>
   );
