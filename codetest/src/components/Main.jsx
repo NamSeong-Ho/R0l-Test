@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './Main.module.css';
 import icon from '../components/image/icon.svg';
+import video from '../components/video/background.mp4';
 
 function Main({ setLoggedInUser, loggedInUser }) {
   const navigate = useNavigate();
@@ -93,7 +94,7 @@ function Main({ setLoggedInUser, loggedInUser }) {
               </button>
               <div className="backgroundVideo">
                 <video ref={videoRef} autoPlay muted loop className="AppVideo">
-                  <source src={`${process.env.PUBLIC_URL}/video/Video.mp4`} type="video/mp4"/>
+                  <source src={video} type="video/mp4"/>
                 </video>
               </div>
     </main>
